@@ -1,2 +1,2 @@
 # Game_Color
-Приложение для Android: https://drive.google.com/file/d/1WOaKAs_0Bk_my8HXQzWx-nrPDiPOLT35/view?usp=sharing
+Приложение для Android: https://drive.google.com/file/d/1KoSJ2_Rp1oz65wlHNl9mnzPAWr3nuFgO/view?usp=sharing
