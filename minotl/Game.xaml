@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="minotl.Game"
+              Title="Игра 3х3">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Clicked="c1" x:Name="b1" />
+        <Button Grid.Row="0" Grid.Column="1" Clicked="c2" x:Name="b2" />
+        <Button Grid.Row="0" Grid.Column="2" Clicked="c3" x:Name="b3" />
+        <Button Grid.Row="1" Grid.Column="0" Clicked="c4" x:Name="b4" />
+        <Button Grid.Row="1" Grid.Column="1" Clicked="c5" x:Name="b5" />
+        <Button Grid.Row="1" Grid.Column="2" Clicked="c6" x:Name="b6" />
+        <Button Grid.Row="2" Grid.Column="0" Clicked="c7" x:Name="b7" />
+        <Button Grid.Row="2" Grid.Column="1" Clicked="c8" x:Name="b8" />
+        <Button Grid.Row="2" Grid.Column="2" Clicked="c9" x:Name="b9" />
+        </Grid>
+</ContentPage>
