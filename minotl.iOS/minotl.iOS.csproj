@@ -136,4 +136,13 @@
   <ItemGroup>
     <BundleResource Include="Resources\test.mp3" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Loss.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Win.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Yes.mp3" />
+  </ItemGroup>
 </Project>

@@ -16,6 +16,7 @@ namespace minotl
         public Random rand = new Random();
         public int i = 0;
         public int ki = 0;
+        public int raund = 1;
         #endregion
 
         #region intialize
@@ -34,7 +35,8 @@ namespace minotl
                 b7.BackgroundColor = Color.FromHex(mcol[i, 6]);
                 b8.BackgroundColor = Color.FromHex(mcol[i, 7]);
                 b9.BackgroundColor = Color.FromHex(mcol[i, 8]);
-               
+
+                Cp_title.Title = $"Раунд [ {raund} ]";
         }
         #endregion
 
@@ -164,10 +166,29 @@ namespace minotl
 
             if (b1.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -187,8 +208,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
 
@@ -197,10 +224,30 @@ namespace minotl
         {
             if (b2.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -220,19 +267,46 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
         async void c3(object semder, EventArgs e)
         {
+
             if (b3.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -252,8 +326,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -261,10 +341,31 @@ namespace minotl
         {
             if (b4.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -284,8 +385,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -293,10 +400,31 @@ namespace minotl
         {
             if (b5.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -316,8 +444,15 @@ namespace minotl
             }
             else
             {
+               
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -325,10 +460,30 @@ namespace minotl
         {
             if (b6.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -348,8 +503,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -357,10 +518,30 @@ namespace minotl
         {
             if (b7.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -380,8 +561,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -389,10 +576,30 @@ namespace minotl
         {
             if (b8.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                                       await Navigation.PopAsync();
 
                 }
                 else
@@ -412,8 +619,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }
@@ -421,10 +634,30 @@ namespace minotl
         {
             if (b9.BackgroundColor == Color.FromHex(ocol[i]))
             {
+                raund++;
+                Cp_title.Title = $"Раунд [ {raund} ]";
+
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Yes.mp3");
+                player.Play();
+                #endregion
+
                 if (ki == 14)
                 {
+                    if (raund > 15)
+                    {
+                        raund = 15;
+                        Cp_title.Title = $"Раунд [ {raund} ]";
+                    }
+                    #region Проигрывание звука при нажатии на кнопку
+                    var player_wins = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                    player_wins.Load("Win.mp3");
+                    player_wins.Play();
+                    #endregion
+
                     await DisplayAlert("Меню", "Вы выйграли", "Закрыть");
-                    await Navigation.PushAsync(new MainPage());
+                    await Navigation.PopAsync();
 
                 }
                 else
@@ -444,8 +677,14 @@ namespace minotl
             }
             else
             {
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("Loss.mp3");
+                player.Play();
+                #endregion
+
                 await DisplayAlert("Меню", "Вы проиграли", "Закрыть");
-                await Navigation.PushAsync(new MainPage());
+                                   await Navigation.PopAsync();
 
             }
         }

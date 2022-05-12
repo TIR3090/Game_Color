@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="minotl.Game"
-              Title="Игра 3х3">
+              Title="Игра 3х3" x:Name="Cp_title">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>

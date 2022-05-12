@@ -13,9 +13,14 @@ namespace minotl
         public MainPage()
         {
             InitializeComponent();
-        }
+            Bt_start.CornerRadius = 100;
+       }
         public async void start(object sender,EventArgs e)
         {
+            Bt_start.ScaleTo(0.9,125);
+            await Bt_start.TranslateTo(0,-5,125);
+            Bt_start.ScaleTo(1, 125);
+            await Bt_start.TranslateTo(0, 5, 125);
 
             #region Проигрывание звука при нажатии на кнопку
             var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
