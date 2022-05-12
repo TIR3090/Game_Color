@@ -10,6 +10,7 @@ namespace minotl
 {
     public partial class MainPage : ContentPage
     {
+        private bool Pressed;
         public MainPage()
         {
             InitializeComponent();
@@ -17,18 +18,29 @@ namespace minotl
        }
         public async void start(object sender,EventArgs e)
         {
-            Bt_start.ScaleTo(0.9,125);
-            await Bt_start.TranslateTo(0,-5,125);
-            Bt_start.ScaleTo(1, 125);
-            await Bt_start.TranslateTo(0, 5, 125);
+            if (Pressed)
+            {
+                return;
+            }
+            Pressed = true;
+            try
+            {
+                Bt_start.ScaleTo(0.9, 125);
+                await Bt_start.TranslateTo(0, -5, 125);
+                Bt_start.ScaleTo(1, 125);
+                await Bt_start.TranslateTo(0, 5, 125);
 
-            #region Проигрывание звука при нажатии на кнопку
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load("test.mp3");
-            player.Play();
-            #endregion
-
-            await Navigation.PushAsync(new Game());
+                #region Проигрывание звука при нажатии на кнопку
+                var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+                player.Load("test.mp3");
+                player.Play();
+                #endregion
+                await Navigation.PushAsync(new Game());
+            }
+            finally
+            {
+                Pressed = false;
+            }
             
         }
 
